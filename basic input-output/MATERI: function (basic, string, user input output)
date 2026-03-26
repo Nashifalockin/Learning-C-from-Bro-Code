@@ -1,0 +1,48 @@
+//FUNCTION
+//Basic understatement
+
+// FUNCTION: menghindari perulangan pada kode, basically, you make a section for the whole operation or algoritma (void) , THEN you make another section to call the algoritma section (int main)
+
+//DECLARING VARIABLES: you do it di section int main()
+
+//contoh: happy bday, accept user input
+
+#include <stdio.h>
+#include <string.h> //perlu pakai function ini karena kita make strlen
+
+// ALGORITMA SECTION
+
+void happybday (char name[] , int age){
+             // ini kayak parameter input that the function expected to receive and use in the function later
+  
+    printf("\nHappy bday to you!");
+    printf("\nHappy bday to you!");
+    printf("\nHappy bday dear %s!" , name);
+    printf("\nHappy bday to you!");
+    printf("\nYou are %d years old!" , age);
+    printf("\ni am proud of you %s<3" , name);
+    printf("\ni love you %s!" , name);
+    
+            
+}
+
+// MAIN FUNCTION: BUAT MANGGIL ALGORITMA FUNCTION
+
+int main() {
+    //DECLARE HERE!
+    //KAMUS
+    char name[20] = "";
+    int age = 0;
+    
+    printf("Enter your name: ");
+    fgets(name , sizeof(name) , stdin);
+    name[strlen(name) - 1] = '\0';
+    
+    printf("Enter your age: ");
+    scanf("%d" , &age);
+    
+    //KITA PANGGIL DAWG
+    happybday(name , age);
+    
+    return 0;
+}
