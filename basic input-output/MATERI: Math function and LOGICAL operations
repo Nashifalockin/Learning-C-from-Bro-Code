@@ -25,3 +25,11 @@ int main() {
     
 
 }
+
+
+LOGICAL OPERATION
+can use #include <stdbool> too
+
+! = not
+&& = and
+|| = or
