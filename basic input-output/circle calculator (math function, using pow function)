@@ -1,0 +1,39 @@
+// CIRLCE CALCULATOR PROGRAM
+//Basically ngehitung luas lingkaran, luas permukaan bola, and volume bola jika input jari-jari
+
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    
+    //KAMUS
+    double radius = 0.0;
+    double luas = 0.0;
+    double luas_permukaan= 0.0;
+    double volume = 0.0;
+    double hasil_luas = 0.0;
+    double hasil_lp = 0.0;
+    double hasil_volume = 0.0;
+    const double phi = 3.14159;
+    
+    //INPUT
+    printf("Enter the radius: ");
+    scanf("%lf" , &radius);
+    
+    //MATH OPERATION
+    luas = pow(radius , 2) * phi;
+    luas_permukaan = 4 * phi * pow(radius , 2);
+    volume = (4.0 / 3.0) * phi * pow(radius , 3);
+    
+  
+    //OUTPUT
+    printf("Area : %.2lf\n" , luas);
+    printf("Surface : %.2lf\n" , luas_permukaan);
+    printf("V0lume : %.2lf\n" , volume);
+    
+    
+    
+    return 0;
+    
+    
+}
