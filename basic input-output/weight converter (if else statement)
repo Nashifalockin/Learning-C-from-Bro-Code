@@ -1,0 +1,46 @@
+// A LITTLE NOTE
+//if else bisa normal OR you can usee boolean function
+// KALAU misal kamu gunain boolean function, make sure to add #include <stdbool.h>
+
+//WEIGHT CONVERTER
+
+#include <stdio.h>
+
+int main() {
+    
+    //KAMUS
+    int choice = 0;
+    float beratKilo = 0;
+    float beratPounds = 0;
+    float pounds = 0;
+    float kilos = 0;
+    
+    printf("Weight Conversion Calculator");
+    printf("\n1. Kilos to Pounds");
+    printf("\n2. Pounds to Kilo");
+    printf("\nEnter your choice (1 or 2): ");
+    scanf("%d" , &choice);
+    
+    if (choice == 1){
+        printf("Enter the weight in Kilogram: ");
+        scanf("%f" , &beratKilo);
+        
+        pounds = beratKilo * 2.20462;
+        
+        printf("%.2f kilograms is equal to %.2f pounds" , beratKilo , pounds);
+        
+    }
+    
+    else if (choice == 2){
+        printf("Enter the weight in Pounds: ");
+        scanf("%f" , &beratPounds);
+        
+        kilos = beratPounds * 0.453592;
+        
+        printf("%.2f pounds is equal to %.2f kilograms" , beratPounds , kilos);
+    }
+    
+    
+    
+    return 0;
+}
