@@ -1,0 +1,48 @@
+//CALCULATOR
+//USING SWITCH!
+//why? krn kalo make if statement RIBET AND BUANYAK
+
+#include <stdio.h>
+
+int main(){
+    
+    //KAMUS
+    char operator = '\0'; 
+    // define char in switch = ASSIGN NULL FIRST! basically untuk ngasih nilai variable aman --> in this case nilanya jadi 0 --> aman di modif
+    double num1 = 0;
+    double num2 = 0;
+    double result = 0;
+    
+    //INPUT
+    printf("Enter operator (+ - / *) : ");
+    scanf("%c" , &operator);
+    printf("Enter first number: ");
+    scanf("%lf" , &num1);
+    printf("Enter second numberr: ");
+    scanf("%lf" , &num2);
+    
+    //OPERATION
+    
+    switch(operator){
+        case '+' :
+        result = num1 + num2;
+        break;
+        
+        case '-' :
+        result = num1 - num2;
+        break;
+        
+        case '*' :
+        result = num1 * num2;
+        break;
+        
+        case '/' :
+        result = num1 / num2;
+        break;
+        
+        
+    }
+     printf("Result %f\n" , result);
+    
+    
+}
