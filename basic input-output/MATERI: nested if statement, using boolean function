@@ -1,0 +1,46 @@
+//NESTED IF STATEMENT
+// biasanya using boolean function
+
+// EXAMPLE: student and senior discount
+//student : 10% off
+//senior : 20% off
+// student + senior : 30% off
+//misal: set the price as 10 dollars --> we're using NESTED IF STATEMENT, karena kalau misal if statement biasa, dia bakal bertahap, jadi kalau misal mereka adalah student + senior --> program bakal cut off bertahap, jadi 10% dari 10 dollar (student discount) baru cut off 20% dari 9 dollar (senior discount). What we want adalah cut off 30% dari 10 dollar langsung.
+
+//Nanti hasilnya:
+// student: $9
+// senior : $8
+// student + senior: $7
+
+#include <stdio.h>
+#include <stdbool.h>
+
+int main() {
+    //KAMUS
+    float price = 10.00;
+    bool isStudent = true;  //or bisa false
+    bool isSenior = false;   //or bisa false
+    
+    //NESTED IF
+    
+    if(isStudent){
+        if(isSenior){
+            printf("you get a student discount of 10%\n");
+            printf("you get a senior discount of 20%\n");
+            price *= 0.7;
+        }
+        else{    //kalau misal HANYA STUDENT
+            printf("you get a student discount of 10%\n");
+            price *= 0.9;
+        }
+    }
+    else{   //ini untuk HANYA SENIOR
+        printf("you get a senior discount of 20%\n");
+        price *= 0.8;
+    }
+    
+    // MAIN OUTPUT
+    
+    printf("The price of a ticket is: $%.2f\n" , price);
+    
+} //end parantheses
