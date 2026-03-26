@@ -1,1 +1,41 @@
-a
+// Online C compiler to run C program online
+#include <stdio.h>
+#include <string.h>  // this supaya output ga ada jarak antara quantity and total. use after fgets function
+
+// SHOPPING CART!
+ int main () {
+ // KAMUS    
+char item[50] = "";
+float price = 0;
+int quantity = 0;
+float total = 0;
+char currency = '$';
+
+ //per input-an
+printf("What item would you like to buy? : ");
+fgets(item, sizeof(item) , stdin);
+item[strlen(item) - 1] = '\0';   //--> null terminator
+
+//scanf(" %c" , &item); --> if you use this, dia cuman bisa baca huruf pertama
+//jadi kalau misal, input 'pizza' , izza bakal jadi buffer input
+// SOLUSI: USE --> fgets function
+
+
+printf("What is the price for each? : ");
+scanf("%f" , &price);
+
+printf("How many item(s) are you buying? : ");
+scanf(" %d" , &quantity);
+
+// Operasi MTK
+
+total = quantity * price;
+
+// Main Output
+
+printf("you have bought %d %s/s\n", quantity, item);
+printf("Your total is %.2f %c\n" , total , currency);
+  
+
+return 0;
+ }
