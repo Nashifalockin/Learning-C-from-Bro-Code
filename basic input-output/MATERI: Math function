@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <math.h> 
+
+//beberapa function:
+
+int main() {
+    int x = 3;
+    
+    x = sqrt(x) //ini untuk penarikan akar
+    x = pow(x , 2) //ini untuk pangkat, jadinya ini nanti x pangkat 2
+    x = round(x) //mostly use this with float, dia bakal ngebuletin angka secara normal, jadi misal 3.14 jadi 3.0
+    x = ceil(x) //ini ngebuletin angka float ke atas, jadi misal 3.14 jadi 4.0
+    x = floor(x) //ini ngebuletin angka float ke bawah, jadi misal 3.99 jadi 3.0
+    x = abs(x) //for int, ini konsepnya kayak tanda mutlak, jadi misal input -3 --> output jadi 3
+    x = log(x) //for int,  untuk cari nilai logaritma natural / lnj
+    
+    //You can use trigonometri too --> hasil in radian
+    x = sin(x)
+    x = cos(x)
+    x = tan(x)
+    
+    
+    //to print --> like usual, misal:
+    printf("%d" , x);
+    
+
+}
