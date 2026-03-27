@@ -1,0 +1,68 @@
+//ARRAY
+
+//Array itu basically kayak koleksi elemen dgn tipe variable yang sama, kayak suitcase yang nyimpan lebih dari 1 barang bertipe sama
+
+// contoh array 
+
+#include <stdio.h>
+
+int main() {
+    int numbers[] = {10, 20, 30, 40, 50, 60}; //Array of integer
+    char grades[] = {'A' , 'B' , 'C' , 'D' 'F'}; //Array of character
+    char name[] = "Bro Code" 
+    //array of character is very similar with string in general
+    
+    //how to display them
+    
+    printf("%d" , numbers[0]); //normal, nanti outputnya 10 --> ARRAY OF STRING
+    //if you print out of bound, misal indeks 8, nanti dia bakal kasih value trash
+    
+    printf("%c" , grades[0]); //this for array of character --> outputnya nanti A
+    
+    printf("%s" , name);  //this for array of string (tulisan) --> outputnya bro code
+    return 0;
+    
+    
+    //WHAT IF --> MAU DISPLAY SELURUH ELEMEN ARRAY NUMBERS?
+    //SOLUSI gunain for loop
+    /*
+    normalnya:
+    
+    for (int i = 0; i < 6; i++){
+        printf("%d" , numbers[i]); 
+    }
+        
+    OUTPUT:
+    10 20 30 40 50 60
+    
+    
+    //WHAT IF: ubah nilai i < 6(range) gaperlu secara manual? 
+    //SOLUSI: we use sizeof function
+    
+    int size = sizeof(numbers) / sizeof(numbers[0]);
+    
+    ket: 
+    sizeof(numbers) = ukuran semua elemen array
+    sizeof(numbers[0]) = ukuran satu elemen array
+    sizeof(numbers) / sizeof(numbers[0]) = mengetahui berapa banyak elemen pada sebuah array
+    
+    loop:
+    
+    for (int i = 0; i < size; i++){
+        printf("%d" , numbers[i]); 
+    }
+    */
+}
+
+/*
+apa beda printf %s and %c?
+char nama[] = "Nashi";
+
+printf("%c\n", nama[0]); // ambil huruf pertama
+printf("%s\n", nama);    // tampilkan seluruh string
+
+output will be:
+
+N
+Nashi
+ */  
