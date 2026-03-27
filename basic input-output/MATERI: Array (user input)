@@ -1,0 +1,22 @@
+// ARRAY : USER INPUT
+// WE USE EMPTY ARRAY yang udah di spesifikasi sizenya
+
+#include <stdio.h>
+
+int main() {
+    int scores[5] = {0}; // ini array kosong yang bisa diisi
+    
+    //we can fill it by using LOOP untuk 5x pengisian
+    
+    //LOOP INPUT
+    for(int i = 0; i < 5; i++){
+        printf("Enter a score: ");
+        scanf("%d" , &scores[i]);
+    }
+    
+    //LOOP OUTPUT
+    for(int i = 0; i < 5; i++){
+        printf("%d " , scores[i]);
+    }
+    return 0;
+}
