@@ -1,0 +1,29 @@
+//ARRAY OF STRING
+//USER INPUT : user input nama --> nama disimpan di array --> nama di display
+//yes, make for loop lagi.
+
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char names[4][25] = {0};  //ini adalah string kosong --> can store up to 4 names (4 baris)
+    
+    int rows = sizeof(names) / sizeof(names[0]);
+    
+    //LOOP INPUT (NAMA USER)
+    
+    for (int i = 0; i < rows; i++){
+        printf("Enter a name: ");
+        fgets(names[i] , sizeof(names[i]) , stdin);
+        names[i][strlen(names[i]) - 1] = '\0';   //NULL TERMINATOR, agak beda dikit si array ni sama string biasa
+    }
+    
+    printf("\n"); //optional, biar rapi ajah
+    // LOOP OUTPUT
+    
+    for(int i = 0; i < rows; i++){
+        printf("%s\n" , names[i]);
+    }
+    
+    return 0;
+}
